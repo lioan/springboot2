@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <meta charset="UTF-8"/>
+    <title th:text="${title}">Title</title>
+    <!-- 在/resources/static/js目录下js 用如下语法依赖即可-->
+    <!--<script type="text/javascript" th:src="@{/js/jquery-3.3.1.min.js}"></script>-->
+</head>
+<body>
+<h1 th:text="${desc}">desc</h1>
+<h2>====作者信息====</h2>
+<p th:text="${user.name}"></p>
+<p th:text="${user.phone}"></p>
+<p th:text="${user.age}"></p>
+<button id="dw" >点我</button>
+<button id="btn">btn</button>
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script>
+    $("#btn").click(function () {
+        console.log("btn click");
+        alert("大家好，南南！");
+    });
+    $("#dw").click(function () {
+        console.log("点我click");
+        alert("你好，南南！！！");
+    });
+</script>
