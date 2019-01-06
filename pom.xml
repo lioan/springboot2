@@ -6,7 +6,8 @@
     <groupId>cn.com.lioan</groupId>
     <artifactId>springboot2</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <!--<packaging>jar</packaging>-->
+    <packaging>war</packaging>
 
     <name>springboot2</name>
     <description>intelligent family system</description>
@@ -28,6 +29,21 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-web</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>
@@ -103,7 +119,7 @@
     </dependencies>
 
     <build>
-        <finalName>ifs</finalName>
+        <finalName>springboot2</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
