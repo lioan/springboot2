@@ -19,6 +19,8 @@
         <module>springboot2-dao</module>
         <module>springboot2-service</module>
         <module>springboot2-web</module>
+        <module>dubbo-interface</module>
+        <module>dubbo-provider</module>
     </modules>
 
     <name>springboot2</name>
