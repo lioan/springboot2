@@ -9,7 +9,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>dubbo-provider</artifactId>
+    <artifactId>dubbo-consumer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <dependencies>
@@ -22,24 +22,18 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
-        <!--引入dubbo-boot的依赖-->
+        <!--引入dubbo的依赖-->
         <dependency>
             <groupId>com.alibaba.spring.boot</groupId>
             <artifactId>dubbo-spring-boot-starter</artifactId>
             <version>2.0.0</version>
         </dependency>
-        <!--<dependency>
-            <groupId>com.alibaba.boot</groupId>
-            <artifactId>dubbo-spring-boot-starter</artifactId>
-            <version>0.2.0</version>
-        </dependency>-->
-
         <!-- 引入zookeeper的依赖 -->
         <dependency>
             <groupId>com.101tec</groupId>
@@ -49,7 +43,7 @@
     </dependencies>
 
     <build>
-        <finalName>provider</finalName>
+        <finalName>consumer</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

@@ -21,6 +21,7 @@
         <module>springboot2-web</module>
         <module>dubbo-interface</module>
         <module>dubbo-provider</module>
+        <module>dubbo-consumer</module>
     </modules>
 
     <name>springboot2</name>
