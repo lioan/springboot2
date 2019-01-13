@@ -37,4 +37,13 @@
         FROM
         <include refid="BASE_TABLE"/>
     </select>
+    
+    <select id="getCountBySex" resultType="map">
+        SELECT t.sex,COUNT(*) as num FROM lioaner t GROUP BY t.sex
+    </select>
+
+    <!--<select id="getLioanMaps" resultType="cn.com.lioan.springboot2.dao.model.Lioaner">-->
+    <select id="getLioanMaps" resultMap="BaseResultMap">
+        select * from lioaner
+    </select>
 </mapper>

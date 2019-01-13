@@ -3,11 +3,10 @@ package cn.com.lioan.springboot2.web.controller;
 import cn.com.lioan.springboot2.dao.model.Lioaner;
 import cn.com.lioan.springboot2.service.LioanerService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by dell on 2018/7/8.
@@ -21,7 +20,7 @@ public class HiController {
 
     @RequestMapping(value = "/")
     public String hi() {
-        return "hi,spring boot2.1.0";
+        return "hi,spring boot2.1.0，springbboot2.";
     }
 
     //测试mybatis
@@ -34,8 +33,19 @@ public class HiController {
         return lioanerService.getLioaners1();
     }
     @RequestMapping("/lioaner/{id}")
-    public Lioaner getLiaonerById(@PathVariable String id){
+    public Lioaner getLioanerById(@PathVariable String id){
         return lioanerService.getLioanerById(id);
+    }
+
+    //返回map：包括表字段和运算结果
+    @RequestMapping(value = "/lm", method = {RequestMethod.GET})
+    public List<Map<String,Object>> getCountBySex(){
+        return lioanerService.getCountBySex();
+    }
+
+    @RequestMapping("/lnm")
+    public Map<String, Lioaner> getLioanMaps(){
+        return lioanerService.getLioanMaps();
     }
 
     //测试多数据源

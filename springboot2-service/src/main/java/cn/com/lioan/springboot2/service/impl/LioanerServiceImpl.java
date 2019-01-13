@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class LioanerServiceImpl implements LioanerService {
@@ -27,5 +28,15 @@ public class LioanerServiceImpl implements LioanerService {
     @Override
     public Lioaner getLioanerById(String id) {
         return lioanerMapper.selectByPrimaryKey(id);
+    }
+
+    @Override
+    public List<Map<String, Object>> getCountBySex() {
+        return lioanerMapper.getCountBySex();
+    }
+
+    @Override
+    public Map<String, Lioaner> getLioanMaps() {
+        return lioanerMapper.getLioanMaps();
     }
 }
